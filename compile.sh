@@ -10,6 +10,10 @@ OUTFILE=""
 while [[ "$#" -gt 0 ]]
 do
     case $1 in
+        --help)
+            echo "usage: ./compile.sh --url <download url> --out <output filename>"
+            exit 0
+        ;;
         --url)
             DOWNLOAD_URL="$2"
             shift
